@@ -1,0 +1,56 @@
+create table property_details (
+COUNTRY varchar(250),
+PROVINCE varchar(250),
+CITY varchar(250),
+PROPERTY_PRICE int,
+BEDROOM int,
+BATHROOM int,
+PARKING int,
+FLOOR_SIZE int,
+MONTHLY_REPAYMENT int,
+TOTAL_ONCE_OFF_COST int,
+MIN_GROSS_MONTHLY_INCOME int)
+
+
+
+--INSERT INTO table_name (column1, column2, column3, ...)
+--VALUES (value1, value2, value3, ...);
+
+insert into property_details(COUNTRY, PROVINCE, CITY, PROPERTY_PRICE, BEDROOM, BATHROOM, PARKING, FLOOR_SIZE, MONTHLY_REPAYMENT, TOTAL_ONCE_OFF_COST, MIN_GROSS_MONTHLY_INCOME)
+
+values ('South Africa', 'Gauteng', 'Pretoria', 1195000, 2, 1, 2, 89, 75023, 11730, 39102),
+('South Africa', 'Limpopo', 'Louis Trichard', 860000, 2, 1, 2, 107, 65528, 8442, 28140),
+('South Africa', 'North West', 'Porchefstroom', 735000, 2, 1, 2, 79, 60584, 7215, 24050),
+('South Africa', 'Gauteng', 'Alberton', 795000, 2, 1, 2, 68, 60584, 7804, 26013),
+('South Africa', 'Free State', 'Bloemfontein ', 1020000, 4, 2, 3, 3975, 75023, 10012, 33375),
+('South Africa', 'Limpopo', 'Tzaneen', 630000, 1, 1, 1, 34, 56019, 6184, 20614),
+('South Africa', 'Western Cape', 'Cape Town', 1880000, 2, 1, 2, 56, 93285, 18454, 61516),
+('South Africa', 'Northern Cape', 'Kimberley', 1995000, 3, 3, 2, 301, 126771, 19583, 65279),
+('South Africa', 'Mpumalanga', 'Witbank', 1150000, 3, 2, 1, 114, 75023, 11288, 37629),
+('South Africa', 'Kwa-Zulu Natal', 'Durban', 2395000, 4, 2, 4, 2617, 162486, 23510, 78367)
+
+SELECT * FROM property_details
+
+SELECT COUNTRY, PROVINCE, CITY, PROPERTY_PRICE, BEDROOM, BATHROOM, PARKING, FLOOR_SIZE, MONTHLY_REPAYMENT, TOTAL_ONCE_OFF_COST, MIN_GROSS_MONTHLY_INCOME
+FROM property_details
+
+SELECT COUNTRY, PROVINCE, CITY, PROPERTY_PRICE
+FROM property_details
+
+SELECT COUNTRY, PROVINCE
+FROM property_details
+
+SELECT COUNTRY, PROVINCE, CITY, PROPERTY_PRICE, BEDROOM, BATHROOM, PARKING, FLOOR_SIZE, MONTHLY_REPAYMENT, TOTAL_ONCE_OFF_COST, MIN_GROSS_MONTHLY_INCOME
+FROM property_details
+
+SELECT DISTINCT COUNTRY, PROVINCE
+FROM property_details
+
+SELECT * FROM property_details
+WHERE province='Gauteng'
+
+SELECT * FROM property_details
+WHERE province='Limpopo'
+
+SELECT COUNTRY, PROVINCE, CITY, PROPERTY_PRICE, BEDROOM, BATHROOM, PARKING, FLOOR_SIZE, MONTHLY_REPAYMENT, TOTAL_ONCE_OFF_COST, MIN_GROSS_MONTHLY_INCOME
+FROM property_details ORDER BY property_price ASC 
